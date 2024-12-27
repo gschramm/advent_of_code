@@ -48,7 +48,7 @@ def bfs(maze):
                 set_val(maze, new_pos, new_score)
                 queue.append((new_pos, new_dir, new_score))
 
-    print(max(ql))
+    # print(max(ql))
 
 
 def reverse_bfs(maze):

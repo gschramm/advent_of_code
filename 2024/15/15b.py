@@ -1,4 +1,5 @@
 import numpy as np
+from time import sleep
 
 
 def print_world(arr):
@@ -9,6 +10,7 @@ def print_world(arr):
 if __name__ == "__main__":
 
     test = False
+    animate = False
 
     if test:
         world_fname = "world_test.txt"
@@ -56,8 +58,9 @@ if __name__ == "__main__":
     cur_i, cur_j = cur_pos[0][0], cur_pos[1][0]
 
     for i_step, step in enumerate(steps):
-        # print_world(world)
-        print(i_step, step)
+        if animate:
+            print_world(world)
+            sleep(0.01)
 
         new_i, new_j = cur_i, cur_j
         if step == "^":
